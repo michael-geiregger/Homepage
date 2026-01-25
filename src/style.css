@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Colors */
+  --bg-color: #F7F5F2;
+  /* Warm off-white */
+  --bg-alt: #EBE8E3;
+  /* Slightly darker beige for sections */
+  --text-primary: #2C332E;
+  /* Deep Green-Grey - almost black but warmer */
+  --text-secondary: #5C615D;
+  /* Softer grey for body text */
+  --accent-color: #8C7B6C;
+  /* Earthy Brown */
+  --accent-hover: #736457;
+  --white: #FFFFFF;
+  --border-color: #DQD5CE;
+
+  /* Spacing */
+  --container-width: 1200px;
+  --container-padding: 2rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 8rem;
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Outfit', sans-serif;
+
+  --h1-size: 3.5rem;
+  --h2-size: 2.5rem;
+  --h3-size: 1.75rem;
+  --body-size: 1.125rem;
+  --small-size: 0.875rem;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  /* Restored to less rounded, more classic feel */
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: var(--space-asm);
+}
+
+h1 {
+  font-size: var(--h1-size);
+  font-weight: 400;
+}
+
+h2 {
+  font-size: var(--h2-size);
+  color: var(--text-primary);
+}
+
+h3 {
+  font-size: var(--h3-size);
+}
+
+p {
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+}
+
+/* Utilities */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.gap-md {
+  gap: var(--space-md);
+}
+
+.mt-lg {
+  margin-top: var(--space-lg);
+}
+
+.mb-lg {
+  margin-bottom: var(--space-lg);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  border-radius: var(--radius-sm);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background-color: var(--text-primary);
+  color: var(--white);
+}
+
+/* Navbar */
+.header {
+  padding: 1.5rem 0;
+  position: absolute;
+  /* Transparent on hero */
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.header.scrolled {
+  position: fixed;
+  background-color: rgba(247, 245, 242, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1rem 0;
+}
+
+.nav-link {
+  margin-left: 2rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--accent-color);
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* New Hero Styles */
+.hero-bg {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/images/coach-portrait.jpg');
+  background-size: cover;
+  background-position: center 20%;
+  background-attachment: fixed;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Gradient: Bottom solid, fading to top transparent */
+  background: linear-gradient(0deg, rgba(247, 245, 242, 1) 5%, rgba(247, 245, 242, 0.7) 40%, rgba(247, 245, 242, 0.4) 100%);
+  z-index: 1;
+}
+
+.hero-content-centered {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding-top: 4rem;
+}
+
+/* Podcast Unification */
+.podcast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.podcast-card {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.podcast-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-serif);
+}
+
+.podcast-card-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  /* Force uniformity */
+}
+
+/* Footer */
+.footer {
+  background-color: var(--text-primary);
+  color: var(--white);
+  padding: var(--space-lg) 0 var(--space-md);
+}
+
+.footer h4 {
+  color: var(--white);
+  font-family: var(--font-sans);
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footer a:hover {
+  color: var(--accent-color);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.9rem;
+}
+
+/* Animation Utils */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  :root {
+    --h1-size: 2.5rem;
+    --h2-size: 2rem;
+  }
+
+  .header .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100vh;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.05);
+  }
+
+  .header .nav-menu.open {
+    transform: translateX(0);
+  }
+
+  .nav-link {
+    margin: 1.5rem 0;
+    font-size: 1.25rem;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+    z-index: 101;
+  }
+
+  .grid,
+  .podcast-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Mobile Hero Fixes - Keeping these adjustments but with original fonts */
+  .hero-bg {
+    background-position: 65% center;
+    background-attachment: scroll;
+    height: 90vh;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(0deg, rgba(247, 245, 242, 1) 15%, rgba(247, 245, 242, 0.85) 50%, rgba(247, 245, 242, 0.6) 100%);
+  }
+
+  .hero-content-centered {
+    padding-top: 6rem;
+  }
+}

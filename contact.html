@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt | Michael Geiregger</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container flex justify-between items-center">
+            <a href="/" class="logo">
+                <h2
+                    style="font-size: 1.5rem; letter-spacing: 0.05em; text-transform: uppercase; font-family: var(--font-sans); color: var(--text-primary);">
+                    Michael Geiregger</h2>
+            </a>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <nav class="nav-menu flex items-center">
+                <a href="/" class="nav-link">Startseite</a>
+                <a href="/about.html" class="nav-link">Über mich</a>
+                <a href="/services.html" class="nav-link">Leistungen</a>
+                <a href="/events.html" class="nav-link">Events</a>
+                <a href="/podcast.html" class="nav-link">Podcast</a>
+                <a href="/contact.html" class="nav-link active">Kontakt</a>
+                <a href="/clarity-call.html" class="btn btn-primary" style="margin-left: 2rem;">Klarheitsgespräch</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header" style="padding-top: 10rem; padding-bottom: 4rem; background-color: var(--bg-alt);">
+            <div class="container text-center fade-in">
+                <h1 style="margin-bottom: 1rem;">Kontakt</h1>
+                <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto;">Lass uns in Verbindung treten.</p>
+            </div>
+        </section>
+
+        <section style="padding: 6rem 0;">
+            <div class="container fade-in" style="max-width: 600px;">
+                <form style="display: grid; gap: 1.5rem;">
+                    <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Vorname</label>
+                            <input type="text"
+                                style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;">
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Nachname</label>
+                            <input type="text"
+                                style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;">
+                        </div>
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">E-Mail</label>
+                        <input type="email"
+                            style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;">
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Nachricht</label>
+                        <textarea rows="5"
+                            style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Nachricht senden</button>
+                </form>
+
+                <div style="margin-top: 4rem; text-align: center;">
+                    <p>Alternativ schreibe mir eine E-Mail an:<br>
+                        <a href="mailto:kontakt@michaelgeiregger.com"
+                            style="color: var(--accent-color); font-weight: 500;">kontakt@michaelgeiregger.com</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <!-- Standard Footer -->
+        <div class="container grid" style="grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem;">
+            <div>
+                <h3 style="color: var(--white); margin-bottom: 1rem; font-family: var(--font-serif);">Michael Geiregger
+                </h3>
+                <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">Coach & Mentor.</p>
+            </div>
+            <div>
+                <h4>Menü</h4>
+                <ul>
+                    <li><a href="/">Startseite</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Rechtliches</h4>
+                <ul>
+                    <li><a href="/legal.html">Impressum</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
