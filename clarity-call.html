@@ -48,29 +48,17 @@
                 </div>
 
                 <div class="fade-in"
-                    style="background-color: var(--white); padding: 3rem; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
-                    <h3 style="margin-bottom: 1.5rem;">Was dich erwartet:</h3>
-                    <ul style="margin-bottom: 2rem; list-style: none;">
-                        <li style="margin-bottom: 1rem; display: flex;"><span
-                                style="color: var(--accent-color); margin-right: 1rem;">&#10003;</span> Eine sichere
-                            Atmosphäre für deine Themen.</li>
-                        <li style="margin-bottom: 1rem; display: flex;"><span
-                                style="color: var(--accent-color); margin-right: 1rem;">&#10003;</span> Ehrliches
-                            Feedback zu deiner Situation.</li>
-                        <li style="margin-bottom: 1rem; display: flex;"><span
-                                style="color: var(--accent-color); margin-right: 1rem;">&#10003;</span> Erste Impulse
-                            für mehr innere Freiheit.</li>
-                    </ul>
-
-                    <div class="text-center" style="margin-top: 3rem;">
-                        <!-- Calendly Placeholder or Contact Form -->
-                        <p style="margin-bottom: 1.5rem; font-style: italic;">Wähle hier einen Termin, der für dich
-                            passt:</p>
-                        <button class="btn btn-primary"
-                            onclick="alert('Hier würde sich der Kalender öffnen (z.B. Calendly).')"
-                            style="width: 100%; max-width: 300px;">Terminkalender öffnen</button>
+                    style="background-color: var(--white); border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); overflow: hidden; border: 1px solid var(--border-color);">
+                    <!-- Calendly Inline Embed -->
+                    <div class="calendly-inline-widget"
+                        data-url="https://calendly.com/michael-geiregger/25min?hide_landing_page_details=1&hide_gdpr_banner=1&primary_color=8c7b6c"
+                        style="min-width:320px;height:700px;">
                     </div>
                 </div>
+
+                <!-- Calendly Script -->
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"
+                    async></script>
             </div>
         </section>
     </main>
