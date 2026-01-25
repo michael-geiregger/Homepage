@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Kontakt | Michael Geiregger</title>
 </head>
 
@@ -45,30 +46,33 @@
 
         <section style="padding: 6rem 0;">
             <div class="container fade-in" style="max-width: 600px;">
-                <form style="display: grid; gap: 1.5rem;">
+                <!-- Formspree Integration -->
+                <form action="https://formspree.io/f/maqownon" method="POST" style="display: grid; gap: 1.5rem;">
                     <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 1.5rem;">
                         <div>
                             <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Vorname</label>
-                            <input type="text"
+                            <input type="text" name="firstName" required
                                 style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;">
                         </div>
                         <div>
                             <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Nachname</label>
-                            <input type="text"
+                            <input type="text" name="lastName" required
                                 style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;">
                         </div>
                     </div>
                     <div>
                         <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">E-Mail</label>
-                        <input type="email"
+                        <input type="email" name="email" required
                             style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;">
                     </div>
                     <div>
                         <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Nachricht</label>
-                        <textarea rows="5"
+                        <textarea name="message" rows="5" required
                             style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Nachricht senden</button>
+                    <p style="font-size: 0.8rem; color: #888; margin-top: 1rem;">* Mit dem Absenden erklärst du dich mit
+                        der Verarbeitung deiner Daten einverstanden.</p>
                 </form>
 
                 <div style="margin-top: 4rem; text-align: center;">
