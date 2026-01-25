@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
+    base: '/Homepage/', // Required for GitHub Pages deployment
     build: {
         rollupOptions: {
             input: {
