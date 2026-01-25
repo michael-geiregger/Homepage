@@ -407,7 +407,7 @@ p {
   /* Ensure the face is visible on narrow screens */
   @media (max-aspect-ratio: 1/1) {
     .hero-bg {
-      background-position: 25% 20%;
+      background-position: 35% 20%;
       /* Nudge to reveal face better on portrait (face is on the left) */
     }
   }
