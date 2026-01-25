@@ -3,10 +3,11 @@
 // Parallax Hero Effect
 export function initParallax() {
     const heroBg = document.querySelector('.hero-bg');
-    if (heroBg && window.innerWidth > 768) { // Only on Desktop
+    if (heroBg) {
         window.addEventListener('scroll', () => {
             const scrollValue = window.scrollY;
-            heroBg.style.backgroundPositionY = `calc(20% + ${scrollValue * 0.3}px)`;
+            // Use different speeds or methods if needed, but keeping it simple for now
+            heroBg.style.backgroundPositionY = `calc(20% + ${scrollValue * 0.2}px)`;
         });
     }
 }

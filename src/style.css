@@ -328,6 +328,11 @@ p {
   color: var(--accent-color);
 }
 
+.footer .socials a:hover {
+  color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: 3rem;
@@ -388,15 +393,27 @@ p {
     grid-template-columns: 1fr !important;
   }
 
-  /* Mobile Hero Fixes - Keeping these adjustments but with original fonts */
+  /* Mobile Hero Improvements */
   .hero-bg {
-    background-position: 65% center;
+    background-position: center 20%;
+    /* Center better for mobile */
     background-attachment: scroll;
-    height: 90vh;
+    /* Scroll is safer for mobile performance */
+    height: 100vh;
+    /* Keep full height */
+    background-size: cover;
+  }
+
+  /* Ensure the face is visible on narrow screens */
+  @media (max-aspect-ratio: 1/1) {
+    .hero-bg {
+      background-position: 75% 20%;
+      /* Nudge to reveal face better on portrait */
+    }
   }
 
   .hero-overlay {
-    background: linear-gradient(0deg, rgba(247, 245, 242, 1) 15%, rgba(247, 245, 242, 0.85) 50%, rgba(247, 245, 242, 0.6) 100%);
+    background: linear-gradient(0deg, rgba(247, 245, 242, 1) 15%, rgba(247, 245, 242, 0.8) 50%, rgba(247, 245, 242, 0.5) 100%);
   }
 
   .hero-content-centered {
