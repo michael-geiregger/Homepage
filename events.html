@@ -52,7 +52,7 @@
                         Alle aktuellen Termine und Tickets findest du direkt auf meinem Eventbrite-Profil.
                     </p>
 
-                    <!-- Eventbrite Embedded Events -->
+                    <!-- Eventbrite Events via API -->
                     <div style="margin-bottom: 4rem;">
                         <h3
                             style="margin-bottom: 2rem; font-family: var(--font-serif); font-size: 2rem; text-align: center;">
@@ -62,24 +62,8 @@
                             Sichere dir deinen Platz für Workshops, Online-Sessions und Retreats.
                         </p>
 
-                        <!-- Eventbrite iFrame Embed -->
-                        <div
-                            style="background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-sm);">
-                            <iframe src="https://www.eventbrite.de/o/16365027883" frameborder="0" height="1000"
-                                width="100%" style="border: none; border-radius: 8px;" title="Eventbrite Events">
-                            </iframe>
-                        </div>
-
-                        <!-- Direct Link -->
-                        <div style="text-align: center; margin-top: 2rem;">
-                            <p style="color: var(--text-secondary); font-size: 0.9rem;">
-                                <a href="https://www.eventbrite.de/o/16365027883" target="_blank"
-                                    rel="noopener noreferrer"
-                                    style="color: var(--accent-color); text-decoration: underline;">
-                                    Direkt zu Eventbrite →
-                                </a>
-                            </p>
-                        </div>
+                        <!-- Events Container (populated by JavaScript) -->
+                        <div id="eventbrite-events-container"></div>
                     </div>
 
                     <!-- Newsletter Section -->
@@ -167,6 +151,11 @@
             </div>
         </div>
     </footer>
+    <script type="module">
+        import { renderEvents } from './src/eventbrite.js';
+        // Load events when page is ready
+        renderEvents('eventbrite-events-container');
+    </script>
     <script type="module" src="src/main.js"></script>
 </body>
 
