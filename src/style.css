@@ -36,8 +36,7 @@
 
   /* Radius */
   --radius-sm: 4px;
-  --radius-md: 8px;
-  /* Restored to less rounded, more classic feel */
+  --radius-md: 50px;
 }
 
 /* Reset */
@@ -162,7 +161,7 @@ p {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   font-size: 0.9rem;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   transition: all 0.3s ease;
   cursor: pointer;
   border: 1px solid transparent;
